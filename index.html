@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burny - Lets Burn Our Calories</title>
+<!--Styles From Css Folder-->
+<link rel="stylesheet" href="css/styles.css">
+<!-- Google Font Api, You can Add Yours, Change In the CSS-->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,800;1,400&family=Roboto:ital,wght@0,300;0,400;0,900;1,100&display=swap" rel="stylesheet">  
+
+<!-- FontAwesome Kit, Download under your name, Link will be sent to you so you can 
+use your kit here-->
+<script src="https://kit.fontawesome.com/f200350c93.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="main-container">
+    <!--Main Panel Start-->
+<div class="main-panel">
+
+<div class="main-panel__date">
+    <span class="main-panel__date--text">Today</span>
+    <span class="main-panel__date--percent">92%</span>
+</div>
+<!--Pie chart start-->
+<div class="main-panel__graph">
+<!--Pie Chart HTML Start-->
+<div class="main-panel__graph-chart">
+                <!--svg start-->
+            <svg viewBox="0 0 36 36" class="chart__circle pink">
+                    <path class="circle-bg"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle circlePercentageValue"
+                        stroke-dasharray="10, 100"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg><!--svg end-->
+
+                <!--inside circle svg start-->
+            <div class="main-panel__graph--text">
+                <span class="remaining" >
+                    Remaining
+                </span>
+                <span class="percentage totalCal__remaining">2300</span>
+                <span class="cal">kcal</span>
+            </div>
+                <!--inside circle svg start-->
+    </div><!--Pie Chart HTML End-->
+
+        </div>
+            <!--Pie chart end-->
+        
+        
+            <!--Main Panel Calories Result Start-->
+        <div class="main-panel__result">
+            <div class="main-panel__result--food">
+                <div class="main-panel__result--food-cal">
+                    + 150 Cal
+                </div>
+                <div class="main-panel__result--food-bar">
+                    
+                </div>
+            </div>
+            <div class="main-panel__result--exercise">
+                <div class="main-panel__result--exercise-cal">
+                    - 150 Cal
+                </div>
+                <div class="main-panel__result--exercise-bar">
+                    
+                </div>
+            </div>
+        </div>
+        <!--Main Panel Calories Result End-->
+
+        <!--Slider Close Button Start-->
+        <div class="slider__close">
+            <button class="slider__close--btn" id="sliderCloseBtn">&larr;</button>
+        </div>
+    <!--Slider Close Button End-->
+
+
+
+        <!--Food Slider End-->
+    <div class="food-slider closed">
+                <img src="img/lily-banse--YHSwy6uqvk-unsplash.jpg" class="food-container__img "alt="food">
+                <!--food slider content start-->
+                <div class="food-slider__content food__slider">
+              
+                  <!-- <div class="food-container__foods" id="add-0">
+                        
+                        <div class="food-container__foods--name">
+                            Tropical Bowl
+                        </div>                   
+                        
+                        <div class="food-container__foods--calBalance">
+                            Calorie Balance
+                            <span class="food-container__foods--cal">615Cal</span>
+                            <div class="food-container__foods--bar"></div>
+                        
+                        </div>
+                     
+                        <div class="food-container__foods--delete">
+                            <button class="btn-deleteItem">
+                                <i class="far fa-times-circle"></i>
+                            </button> 
+                        </div>
+
+                    </div>   -->
+            
+                </div>
+                <!--food slider content start-->
+                
+    </div><!--Food Slider End-->
+
+
+    <!--exercise panel start-->
+    <div class="exercise-slider closed">
+        <img src="img/john-arano-h4i9G-de7Po-unsplash.jpg" class="food-container__img "alt="food">
+        <div class="slider__content exercise__slider">
+            <!-- <div class="food-container__foods running-container__name" id="burn-0">
+                <div class="food-container__foods--name running-container__name">
+                    Running
+                </div>                   
+                <div class="food-container__foods--calBalance running__calBalance">
+                    Calorie Burned
+                    <span class="food-container__foods--cal  running__calBalance--cal"> -370Cal</span>
+                    <div class="food-container__foods--bar  running__calBalance--bar"></div>
+                    
+                </div>
+                <div class="food-container__foods--delete running-container__delete">
+                <button class="btn-deleteItem"><i class="far fa-times-circle"></i>
+                </button> 
+                </div>
+            </div> -->
+        </div>
+    </div><!--exercise panel ends-->
+
+
+    <!--adding new item form start-->
+    <div class="showForm closed">
+
+        <img src="img/alexandru-bogdan-ghita-UeYkqQh4PoI-unsplash.jpg" class="showForm__img">
+        <form action="">
+        <div class="showForm__container">
+            <select class="showForm__type">
+                <option value="add" class="food" selected="">Food</option>
+                <option value="burn" class="run">Exercise</option>
+            </select>
+            <div class="showForm__description">
+                <input type="text" class="showForm__description__input" placeholder="Add description" name="description" id='description' autocomplete="off" required />
+            </div>
+
+            <div class="showForm__add">
+ 
+                <div class="showForm__add-input" style="display:flex; justify-content: space-around;" >
+                    <input type="number" class=" quantity" placeholder="1" >
+                    <input type="number" class="showForm__add-value showForm__add-calories" placeholder="Calories">
+                </div>
+                <div class="error">
+                </div>
+            <button class="showForm__add-btn"><i class="fas fa-check"></i></button>
+            </div>
+
+        </div>
+        </form>
+    </div>
+            <!--adding new item form end-->
+
+
+    <!-- Three buttons section start-->
+    <div class="btn-panel">
+        <button id="addBtn" class="addBtn btn-panel__food btn-panel__food--add">
+            <i class="fas fa-plus-circle"></i>
+        </button>
+        <div class="btn-panel-group">
+            <button id="foodBtn" class="btn-panel__food btn-panel__food--apple">
+            <i class="fas fa-apple-alt"></i>
+            <span class="btn-panel__food--text">+ Food</span>
+            <!-- <div class="circle-container">
+                <div class="pulsate"></div>
+                <div class="circle"></div>
+            </div> -->
+            </button>
+            <button id="exerciseBtn" class="toggleBtn1 btn-panel__food btn-panel__food--fire">
+                <i class="fas fa-fire"></i>
+                <span class="btn-panel__food--text exercise-burn-text"> - Exercise</span>
+                <!-- <div class="circle-container">
+                    <div class="pulsate"></div>
+                    <div class="circle"></div>
+                </div> -->
+            </button>
+        </div>
+    </div>
+    <!-- Three buttons section end-->
+</div>
+
+</div>
+
+<!--main panel ends-->
+
+
+</body>
+<script src="js/app.js"></script>
+<script src="js/burny.js"></script>
+</html>
