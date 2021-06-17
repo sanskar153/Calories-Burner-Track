@@ -1,5 +1,7 @@
 # Calories-Burner-Track
-Using HTML,CSS,JAVASCRIPT
+Using HTML,CSS,JAVASCRIPT <br>
+
+It's a calorie tracker app that calculates the number of calories burnt in exercise and the calorie intake in a diet.
 
 
 # Link To THE WEBSITE
